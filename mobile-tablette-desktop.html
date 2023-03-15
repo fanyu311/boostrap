@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile-first</title>
+
+    <style>
+        /* le mobile d'abord */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header,
+        footer {
+            background-color: rgb(172, 115, 46);
+            color: white;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            background-color: rgb(10, 196, 196);
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px #505050, 0 1px 4px #505050;
+        }
+
+        nav ul li:hover {
+            background-color: rgb(157, 109, 202);
+            cursor: pointer;
+        }
+
+        .right {
+            background-color: rgb(10, 196, 196);
+            cursor: pointer;
+        }
+
+        .right ul {
+            list-style: none;
+        }
+
+        .right ul li {
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+
+
+
+
+        /* Pour les fenetres dont la largeur est supérieure à 768px et inférieure à 991px les colonnes sont définies*/
+        @media only screen and (min-width: 768px) and (max-width:991px) {
+
+            /*Pour le Desktop  */
+            [class*="col-"] {
+                /* pour les vieux de la vieille */
+                float: left;
+
+
+            }
+
+
+            .col-tab-12 {
+                width: 100%;
+
+            }
+
+            .col-tab-9 {
+                width: 75%;
+            }
+
+            .col-tab-6 {
+                width: 50%;
+            }
+
+            .col-tab-3 {
+                width: 25%;
+            }
+        }
+
+        /* Pour les fenetres dont la largeur est supérieure à 768px et inférieure à 991px les colonnes sont définies*/
+        @media only screen and (min-width: 992px) {
+
+            /*Pour le Desktop  */
+            [class*="col-"] {
+                /* pour les vieux de la vieille */
+                float: left;
+
+
+            }
+
+
+            .col-12 {
+                width: 100%;
+
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <section class="row">
+        <nav>
+            <ul class="col-3 col-tab-6">
+                <li>Home</li>
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Contact</li>
+            </ul>
+
+        </nav>
+
+        <div class="col-6 col-tab-6">
+            <h2>Home of the Responsive web Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consequuntur voluptatibus enim quod odio
+                eligendi et a accusamus iste, eveniet similique vitae minima repellendus distinctio est ullam
+                necessitatibus ipsam nisi.
+                Soluta iure error quod repellendus ipsa quasi, mollitia voluptas cum quisquam facere nihil tempora sit
+                nostrum similique nisi maxime aut, atque ex veritatis illo. Quo, voluptates? Fuga natus blanditiis
+                dignissimos!
+                Sit sunt, facilis nesciunt amet consectetur explicabo molestias nulla voluptas quos iure sed doloremque
+                impedit nam omnis fugiat unde iusto vero veritatis deleniti? Unde doloremque dolores, amet nesciunt
+                soluta provident?
+                Alias, provident consequuntur quod ipsam iure necessitatibus. Perferendis non assumenda itaque sapiente.
+                Molestiae atque amet eveniet eos. Inventore, distinctio mollitia dolores similique accusamus, aut
+                doloremque voluptatem et earum nisi quisquam.
+                Ullam voluptatem dolore dignissimos, accusantium voluptatum et suscipit nobis nihil alias ipsa sint ad
+                temporibus nisi veritatis? Officiis autem facere beatae quae culpa quam nesciunt dolores, nulla, odio
+                atque tempora.
+                Velit ea, eos aut ipsam qui accusantium odit. Esse non tempora adipisci enim facilis. Enim sunt minus
+                iusto, necessitatibus omnis, quae placeat ea vel id fugiat voluptatem nihil atque harum.</p>
+        </div>
+        <div class="col-3 col-tab-12 right">
+            <h3>Side Menu</h3>
+            <ul>
+                <li>What ?</li>
+                <li>Where ?</li>
+                <li>Who ?</li>
+                <li>How ?</li>
+            </ul>
+        </div>
+
+
+
+    </section>
+    <footer>
+        <h3>Footer</h3>
+    </footer>
+
+
+</body>
+
+</html>
